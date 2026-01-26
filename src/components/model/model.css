@@ -1,0 +1,84 @@
+.model-container {
+    background-color: #0000005e;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.model-details {
+    width: 75%;
+    background-color: #0505795d;
+    border: 1px solid #0c0c77;
+    backdrop-filter: blur(5px);
+    display: flex;
+    padding: 3rem;
+    border-radius: 1rem;
+    justify-content: space-between;
+    position: relative;
+}
+
+.model-details > .goOut {
+    background-color: red;
+    padding: 0.3rem;
+    border-radius: 50%;
+    font-weight: bold;
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -0.6rem;
+    right: -0.6rem;
+    cursor: pointer;
+}
+
+.model-details > .info-details {
+    width: 48%;
+}
+
+
+.model-details > .info-details > span {
+    color: #6f0bb1;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.model-details > .info-details > p {
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+.model-details > .getInOnSite {
+    width: 48%;
+}
+
+.model-details > .getInOnSite > img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.model-details > .getInOnSite > button {
+    background-color: #0505795d;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: .4s;
+    border: 1px solid #3691b4;
+    border-width: 0.1rem;
+    box-shadow: 0px 0px 18px #0909c4a1;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.model-details > .getInOnSite > button:hover {
+    color: skyblue;
+    box-shadow: 0px 0px 18px #800c59a1;
+}

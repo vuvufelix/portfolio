@@ -1,0 +1,134 @@
+main {
+    width: 85%;
+    display: block;
+    margin: auto;
+}
+
+.Home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.Home-container > .first-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+
+    width: 50%;
+}
+
+.Home-container > .first-content > span {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.Home-container > .first-content > strong {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.Home-container > .first-content > small {
+    color: skyblue;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.Home-container > .first-content  > p {
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+.Home-container > .first-content > .button-first-content {
+    display: flex;
+    gap: 1rem;
+}
+
+.Home-container > .first-content > .button-first-content > button {
+    background-color: #0505795d;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: .4s;
+    border: 1px solid #3691b4;
+    border-width: 0.1rem;
+    box-shadow: 0px 0px 18px #0909c4a1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.Home-container > .first-content > .button-first-content > button.cv {
+    background-color: transparent;
+    color: #3691b4;
+    border: 1px solid #3691b4;
+}
+
+.Home-container > .first-content > .button-first-content > button:hover {
+    background-color: #020236a4;
+    border: 1px solid #3691b4;
+    border-width: 0.1rem;
+    color: #fff;
+}
+
+.Home-container > img {
+    filter: brightness(0.5);
+    animation: flutte 3s ease-out infinite;
+    box-shadow: 0 0 80px #000000;
+}
+
+.carousel {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    margin-top: 6rem;
+    border-top: 1px solid skyblue;
+    border-bottom: 1px solid skyblue;
+    overflow: hidden;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+    animation: spin 9s infinite linear;
+    padding-right: 1em;
+}
+
+.card {
+    flex: 0 0 1em;
+    height: 3rem;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: skyblue;
+    text-align: center;
+    align-content: center;
+}
+
+@keyframes flutte {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes spin {
+    from {
+        translate: 0;
+    } to {
+        translate: -100%;
+    }
+}

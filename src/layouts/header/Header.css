@@ -1,0 +1,46 @@
+header {
+    background-color: #0505795d;
+    width: 85%;
+    padding: 0.3rem 1.7rem ;
+    display: block;
+    margin: 1rem auto 0 auto;
+    border-radius: 1.5rem;
+    border: 1px solid #0c0c77;
+    backdrop-filter: blur(7px);
+    font-weight: bold;
+    position: sticky;
+    top: 1rem;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title-container > h1 {
+        font-size: 1.3rem;
+    }
+
+    .title-container strong {
+        color: skyblue;
+    }
+
+    .menu-container {
+        display: flex;
+        gap: 2.5rem;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            transition: .4s;
+        }
+
+        a:hover {
+            color: skyblue;
+        }
+
+        a.active {
+            color: skyblue;
+            font-style: italic;
+        }
+    }
+}
