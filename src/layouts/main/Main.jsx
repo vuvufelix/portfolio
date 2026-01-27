@@ -32,21 +32,15 @@ import { RiToolsFill } from "react-icons/ri";
 import { AiFillDatabase } from "react-icons/ai";
 import { FaBolt } from "react-icons/fa6";
 
-import { useState } from "react";
+import { useContext } from "react";
+import GlobalContext from "../../context/globalContext";
 
 const Main = () => {
 
-    const [details, setDetails] = useState(false);
-    const [scroll, setScroll] = useState(false);
-
-    function desappearScroll() {
-        setScroll(true)
-        document.body.style.overflow = "hidden";
-    }
+    const GlobalData = useContext(GlobalContext);
 
     function showDetails() {
-        console.log("Tudo certo!");
-        desappearScroll();
+        GlobalData.setShowModel(true);
     }
 
     return (

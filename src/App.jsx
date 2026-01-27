@@ -4,12 +4,17 @@ import Main from "./layouts/main/Main.jsx";
 import Models from "./components/model/Models.jsx"
 
 import { useState } from "react";
+import { useContext } from "react";
+import GlobalContext from "./context/globalContext.jsx";
+
 import "./App.css";
 import "./index.css";
 
 function App() {
 
   const [menu, setMenu] = useState("Home");
+
+  const GlobalData = useContext(GlobalContext);
 
   const optionsMenu = ["Home", "About", "Skills", "Portfolio", "Contact"];
 
@@ -30,7 +35,7 @@ function App() {
           </div>
         </Header>
         <Main/>
-        <Models/>
+        {GlobalData.showModel && <Models/> }
       </div>
     </div>
   );

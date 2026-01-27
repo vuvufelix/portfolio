@@ -1,13 +1,14 @@
 .model-container {
     background-color: #0000005e;
-    position: absolute;
+    position: fixed;
     top: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .4s;
 }
 
 .model-details {
@@ -20,6 +21,7 @@
     border-radius: 1rem;
     justify-content: space-between;
     position: relative;
+    transition: .4s;
 }
 
 .model-details > .goOut {
