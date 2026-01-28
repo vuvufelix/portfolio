@@ -1,0 +1,142 @@
+.contact-container {
+    margin-top: 5rem;
+}
+
+.contact-container > h2 {
+    font-size: 2.7rem;
+    text-align: center;
+}
+
+.contact-container > .contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-container > .contact-info > .other-contacts {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.contact-container > .contact-info > .other-contacts > span {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: skyblue;
+}
+
+.contact-container > .contact-info > .other-contacts > p {
+    line-height: 2rem;
+    font-size: 1.1rem;
+    text-align: justify;
+    color: gray;
+}
+
+.contact-container > .contact-info > .other-contacts > .contacts {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.contact-container > .contact-info > .other-contacts > .contacts::after {
+    content: "";
+    position: absolute;
+    background-color: #6f0bb1;
+    width: 80%;
+    height: 0.1rem;
+    bottom: -0.5rem;
+}
+
+.contact-container > .contact-info > .other-contacts > .contacts > .icon {
+    color: skyblue;
+    font-size: 1.5rem;
+}
+
+.contact-container > .contact-info > .other-contacts > .contacts > .my-contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container > .contact-info > .other-contacts > .contacts > .my-contacts > a {
+    color: grey;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.contact-container > .contact-info > .other-contacts > .contacts > .my-contacts > a:hover {
+    text-decoration: underline;
+}
+
+/**/
+.contact-container > .contact-info > .container-form {
+    background-color: #0505795d;
+    padding: 1.6rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-container > .contact-info > .container-form > .form-line {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-container > .contact-info > .container-form > .form-line > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.contact-container > .contact-info > .container-form > .form-line > div > input {
+    border: 1px solid #0c0c77;
+    background-color: transparent;
+    color: #fff;
+    text-indent: 0.3rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    box-shadow: 0px 0px 18px #0909c4a1;
+}
+
+.contact-container > .contact-info > .container-form > .form-lines {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container > .contact-info > .container-form > .form-lines > input  {
+    border: 1px solid #0c0c77;
+    background-color: transparent;
+    color: #fff;
+    text-indent: 0.3rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    box-shadow: 0px 0px 18px #0909c4a1;
+}
+
+.contact-container > .contact-info > .container-form > .form-lines > textarea  {
+    border: 1px solid #0c0c77;
+    background-color: transparent;
+    color: #fff;
+    text-indent: 0.3rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    box-shadow: 0px 0px 18px #0909c4a1;
+}
+
+.contact-container > .contact-info > .container-form > button {
+    background-color: #6f0bb16b;
+    border: 1px solid #6f0bb1;
+    padding: 0.5rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.contact-container > .contact-info > .container-form > button:hover {
+    background-color: #6f0bb1bd;
+    color: gray;
+}

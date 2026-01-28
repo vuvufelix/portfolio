@@ -1,7 +1,7 @@
 import SpaceBackground from "./components/SpaceBackground";
 import Header from "./layouts/header/Header.jsx";
 import Main from "./layouts/main/Main.jsx";
-import Models from "./components/model/Models.jsx"
+import Models from "./components/model/Models.jsx";
 
 import { useState } from "react";
 import { useContext } from "react";
@@ -19,7 +19,7 @@ function App() {
   const optionsMenu = ["Home", "About", "Skills", "Portfolio", "Contact"];
 
   return (
-    <div className="App" style={{ position: "relative", zIndex: 1, color: "white", overflow: "hidden"}}>
+    <div className="App" style={{ position: "relative", zIndex: 1, color: "white"}}>
       <SpaceBackground />
       
       {/* O conteúdo do seu portfólio vem aqui */}

@@ -2,6 +2,7 @@ import "./Main.css";
 import "./aboutContainer.css";
 import "./skills.css";
 import "./portfolio.css";
+import "./contact.css";
 
 import vuvu from "../../assets/vuvu2.png";
 import build from "../../assets/build.webp";
@@ -31,6 +32,8 @@ import { FaDatabase } from "react-icons/fa6";
 import { RiToolsFill } from "react-icons/ri";
 import { AiFillDatabase } from "react-icons/ai";
 import { FaBolt } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+import { BsLinkedin } from "react-icons/bs";
 
 import { useContext } from "react";
 import GlobalContext from "../../context/globalContext";
@@ -256,6 +259,61 @@ const Main = () => {
                         </div>
                         <span>Tela de login com autenticação</span>
                     </div>
+                </div>
+            </section>
+            <section className="contact-container">
+                <h2>Contact<span style={{color: "skyblue"}}> .</span></h2>
+                <div className="contact-info">
+                    <div className="other-contacts">
+                        <span>Conecte-se comigo</span>
+                        <p>
+                            Estou disponível para novos projetos e colaborações. Sinta-se avontade para me enviar uma mensagem.
+                        </p>
+                        <div className="contacts">
+                            <MdEmail className="icon"/>
+                            <div className="my-contacts">
+                                <span>Email</span>
+                                <a href="#">vuvufelix2018@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div className="contacts">
+                            <BsFillTelephoneFill className="icon"/>
+                            <div className="my-contacts">
+                                <span>Telefone</span>
+                                <a href="#">929442549</a>
+                            </div>
+                        </div>
+
+                        <div className="contacts">
+                            <BsLinkedin className="icon"/>
+                            <div className="my-contacts">
+                                <span>LinkedIn</span>
+                                <a href="#">Vuvu Félix</a>
+                            </div>
+                        </div>
+                    </div>
+                    <form className="container-form">
+                        <div className="form-line">
+                            <div>
+                                <label htmlFor="name">Nome</label>
+                                <input type="text" name="name" id="name" />
+                            </div>
+                            <div>
+                                <label htmlFor="email">E-mail</label>
+                                <input type="email" name="email" id="email" />
+                            </div>
+                        </div>
+                        <div className="form-lines">
+                            <label htmlFor="summary">Assunto</label>
+                            <input type="text" name="summary" id="summary" />
+                        </div>
+                        <div className="form-lines">
+                            <label htmlFor="sms">Mensagem</label>
+                            <textarea name="sms" id="sms"></textarea>
+                        </div>
+                        <button>Enviar Mensagem</button>
+                    </form>
                 </div>
             </section>
         </main>
