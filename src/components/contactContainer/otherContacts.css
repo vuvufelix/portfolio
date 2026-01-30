@@ -1,0 +1,55 @@
+.other-contacts {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.other-contacts > span {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: skyblue;
+}
+
+.other-contacts > p {
+    line-height: 2rem;
+    font-size: 1.1rem;
+    text-align: justify;
+    color: gray;
+}
+
+.other-contacts > .contacts {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.other-contacts > .contacts::after {
+    content: "";
+    position: absolute;
+    background-color: #6f0bb1;
+    width: 80%;
+    height: 0.1rem;
+    bottom: -0.5rem;
+}
+
+.other-contacts > .contacts > .icon {
+    color: skyblue;
+    font-size: 1.5rem;
+}
+
+.other-contacts > .contacts > .my-contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.other-contacts > .contacts > .my-contacts > a {
+    color: grey;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.other-contacts > .contacts > .my-contacts > a:hover {
+    text-decoration: underline;
+}

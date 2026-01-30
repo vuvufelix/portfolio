@@ -5,11 +5,14 @@ const GlobalContext = createContext();
 export function GlobalContextProvider({ children }) {
     
     const [showModel, setShowModel] = useState(false);
+    const [portfolio, setPortfolio] = useState({});
     
     return (
         <GlobalContext.Provider value={{
             showModel,
-            setShowModel
+            setShowModel,
+            portfolio,
+            setPortfolio
         }}>
             { children }
         </GlobalContext.Provider>

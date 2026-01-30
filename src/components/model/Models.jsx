@@ -16,14 +16,14 @@ const Model = () => {
       <section className="model-details">
         <span className="goOut" onClick={() => closeModel()}>x</span>
         <div className="info-details">
-          <span>HairDay</span>
+          <span>{GlobalData.portfolio.name}</span>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, repudiandae fugit tempore qui corporis labore maiores animi architecto rem? Alias laborum natus enim! Alias soluta perspiciatis sequi quasi odit iure?
+            {GlobalData.portfolio.description}
           </p>
         </div>
         <div className="getInOnSite">
-          <img src={quiz} alt="imagem do projeto" />
-          <button>Acessar o Projeto</button>
+          <img src={GlobalData.portfolio.image} alt={GlobalData.portfolio.name} />
+          <a href={GlobalData.portfolio.link} target="_blank" rel="external">Ver Projeto</a>
         </div>
       </section>
     </div>

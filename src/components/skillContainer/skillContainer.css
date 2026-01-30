@@ -1,0 +1,33 @@
+.skills-container {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.skills-container > p {
+    color: grey;
+}
+
+.skills-container > h2 {
+    font-size: 2.7rem;
+}
+
+.skills-container > div {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.skills-container > div > span {
+    background-color: #6f0bb16b;
+    border: 1px solid #6f0bb1;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem
+}

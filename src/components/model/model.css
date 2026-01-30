@@ -65,7 +65,7 @@
     border-radius: 1rem;
 }
 
-.model-details > .getInOnSite > button {
+.model-details > .getInOnSite > a {
     background-color: #0505795d;
     color: #fff;
     font-weight: bold;
@@ -78,6 +78,9 @@
     box-shadow: 0px 0px 18px #0909c4a1;
     width: 100%;
     margin-top: 1rem;
+    text-decoration: none;
+    display: block;
+    text-align: center;
 }
 
 .model-details > .getInOnSite > button:hover {

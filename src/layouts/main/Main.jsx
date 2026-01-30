@@ -1,9 +1,6 @@
 import "./Main.css";
-import "./aboutContainer.css";
-import "./skills.css";
-import "./portfolio.css";
-import "./contact.css";
 
+// Imagens
 import vuvu from "../../assets/vuvu2.png";
 import build from "../../assets/build.webp";
 import imageProject1 from "../../assets/imagemProject.png";
@@ -13,6 +10,7 @@ import quiz from "../../assets/quiz.jpg";
 import agend from "../../assets/agendamento.png";
 import login from "../../assets/login.png";
 
+// Icones
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaHtml5 } from "react-icons/fa6";
 import { SiCss3 } from "react-icons/si";
@@ -25,297 +23,292 @@ import { FaNode } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
 import { SiMysql } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
-import { FaDownload } from "react-icons/fa";
-import { BsFillTelephoneFill } from "react-icons/bs";
 import { GrMysql } from "react-icons/gr";
-import { FaDatabase } from "react-icons/fa6";
-import { RiToolsFill } from "react-icons/ri";
-import { AiFillDatabase } from "react-icons/ai";
-import { FaBolt } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { BsLinkedin } from "react-icons/bs";
 
+// Hooks
 import { useContext } from "react";
 import GlobalContext from "../../context/globalContext";
+
+// Componetes
+import Carousel from "../../components/carousel/Carousel";
+import Group from "../../components/groupCarrousel/Group";
+import AboutContainer from "../../components/aboutContainer/AboutContainer";
+import AboutContainerInfo from "../../components/aboutContainer/AboutContainerInfo";
+import About from "../../components/aboutContainer/About.jsx";
+import SkillContainer from "../../components/skillContainer/SkillContainer.jsx";
+import SkillContainerSection from "../../components/skillContainer/SkillContainerSection.jsx";
+import PortfolioContainer from "../../components/portfolioContainer/PortfolioContainer.jsx";
+import PortfolioContainerProjects from "../../components/portfolioContainer/PortfolioContainerProjects.jsx";
+import ContactContainer from "../../components/contactContainer/ContactContainer.jsx";
+import ContactInfo from "../../components/contactContainer/ContactInfo.jsx";
+import OtherContacts from "../../components/contactContainer/OtherContacts.jsx";
+import FormContainer from "../../components/contactContainer/FormContainer.jsx";
+import HomeContainer from "../../components/homeContainer/HomeContainer.jsx";
+import HomeContent from "../../components/homeContainer/HomeContent.jsx";
 
 const Main = () => {
 
     const GlobalData = useContext(GlobalContext);
 
-    function showDetails() {
+    const iconCarousel = [
+        <IoLogoJavascript className="card"/>,
+        <FaHtml5 className="card" />,
+        <SiCss3 className="card"/>,
+        <RiReactjsLine className="card"/>,
+        <FaGitAlt className="card"/>,
+        <FaGithub className="card"/>,
+        <FaNode className="card"/>,
+        <RiTailwindCssFill className="card"/>,
+        <SiExpress className="card"/>,
+        <TbBrandReactNative className="card"/>,
+        <SiTypescript className="card"/>,
+        <SiMysql className="card"/>
+    ];
+
+    const skillsArray = [
+        {
+            icon: <RiReactjsLine style={{fontSize: "2.5rem", color: "skyblue"}}/>,
+            name: "React js",
+            leavel: "Intermediário"
+        },
+        {
+            icon: <SiTypescript style={{fontSize: "2.5rem", color: "blue"}}/>,
+            name: "TypeScript",
+            leavel: "Intermediário"
+        },
+        {
+            icon: <FaHtml5 style={{fontSize: "2.5rem", color: "red"}}/>,
+            name: "HTML5",
+            leavel: "Avançado"
+        },
+        {
+            icon: <SiCss3 style={{fontSize: "2.5rem", color: "blue"}}/>,
+            name: "CSS3",
+            leavel: "Avançado"
+        },
+        {
+            icon: <TbBrandReactNative style={{fontSize: "2.5rem", color: "blue"}}/>,
+            name: "React Native",
+            leavel: "Intermediário"
+        },
+        {
+            icon: <IoLogoJavascript style={{fontSize: "2.5rem", color: "yellow"}}/>,
+            name: "JavaScript",
+            leavel: "Intermediário"
+        },
+        {
+            icon: <GrMysql style={{fontSize: "2.5rem", color: "blue"}}/>,
+            name: "MySQL",
+            leavel: "Intermediário"
+        },
+        {
+            icon: <FaNode style={{fontSize: "2.5rem", color: "green"}}/>,
+            name: "Node.js",
+            leavel: "Intermediário"
+        },
+        {
+            icon: <SiExpress style={{fontSize: "2.5rem", color: "black"}}/>,
+            name: "Express.js",
+            leavel: "Intermediário"
+        },
+        {
+            icon: <FaGitAlt style={{fontSize: "2.5rem", color: "red"}}/>,
+            name: "Git",
+            leavel: "Avançado"
+        },
+        {
+            icon: <RiTailwindCssFill style={{fontSize: "2.5rem", color: "skyblue"}}/>,
+            name: "Tailwind CSS",
+            leavel: "Intermediário"
+        },
+        {
+            icon: <FaGithub style={{fontSize: "2.5rem", color: "black"}}/>,
+            name: "GitHub",
+            leavel: "Avançado"
+        }
+    ];
+
+    const portfolioProjects = [
+        {
+            id: "1",
+            name: "neneth",
+            icons: [
+                <FaNode className="newI" style={{ color: "green"}}/>,
+                <SiCss3 className="newI" style={{color: "blue"}}/>,
+                <IoLogoJavascript className="newI" style={{color: "yellow"}}/>,
+                <RiReactjsLine className="newI" style={{color: "skyblue"}}/>
+            ],
+            image: neneth,
+            description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, 
+                repudiandae fugit tempore qui corporis labore maiores animi architecto rem? 
+                Alias laborum natus enim! Alias soluta perspiciatis sequi quasi odit iure?
+            `,
+            link: "https://nenet.vercel.app"
+        },
+        {
+            id: "2",
+            name: "HairDay",
+            icons: [
+                <SiCss3 className="newI" style={{color: "blue"}}/>,
+                <IoLogoJavascript className="newI" style={{color: "yellow"}}/>,
+                <RiReactjsLine className="newI" style={{color: "skyblue"}}/>
+            ],
+            image: imageProject1,
+            description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, 
+                repudiandae fugit tempore qui corporis labore maiores animi architecto rem? 
+                Alias laborum natus enim! Alias soluta perspiciatis sequi quasi odit iure?
+            `,
+            link: "https://hair-day-three.vercel.app"
+        },
+        {
+            id: "3",
+            name: "FerMovie",
+            icons: [
+                <SiCss3 className="newI" style={{color: "blue"}}/>,
+                <IoLogoJavascript className="newI" style={{color: "yellow"}}/>,
+                <RiReactjsLine className="newI" style={{color: "skyblue"}}/>
+            ],
+            image: ferMovie,
+            description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, 
+                repudiandae fugit tempore qui corporis labore maiores animi architecto rem? 
+                Alias laborum natus enim! Alias soluta perspiciatis sequi quasi odit iure?
+            `,
+            link: "https://fer-movie.vercel.app"
+        },
+        {
+            id: "4",
+            name: "Quiz javaScript",
+            icons: [
+                <FaHtml5  className="newI" style={{color: "red"}}/>,
+                <SiCss3 className="newI" style={{color: "blue"}}/>,
+                <IoLogoJavascript className="newI" style={{color: "yellow"}}/>
+            ],
+            image: quiz,
+            description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, 
+                repudiandae fugit tempore qui corporis labore maiores animi architecto rem? 
+                Alias laborum natus enim! Alias soluta perspiciatis sequi quasi odit iure?
+            `,
+            link: "https://vuvufelix.github.io/Quiz-Javascript/"
+        },
+        {
+            id: "5",
+            name: "Lending page de agendamento",
+            icons: [
+                <FaHtml5  className="newI" style={{color: "red"}}/>,
+                <SiCss3 className="newI" style={{color: "blue"}}/>,
+                <IoLogoJavascript className="newI" style={{color: "yellow"}}/>
+            ],
+            image: agend,
+            description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, 
+                repudiandae fugit tempore qui corporis labore maiores animi architecto rem? 
+                Alias laborum natus enim! Alias soluta perspiciatis sequi quasi odit iure?
+            `,
+            link: "https://vuvufelix.github.io/servi-o-de-agendamento/"
+        },
+        {
+            id: "6",
+            name: "Tela de login com autenticação",
+            icons: [
+                <FaHtml5  className="newI" style={{color: "red"}}/>,
+                <SiCss3 className="newI" style={{color: "blue"}}/>,
+                <IoLogoJavascript className="newI" style={{color: "yellow"}}/>
+            ],
+            image: login,
+            description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, 
+                repudiandae fugit tempore qui corporis labore maiores animi architecto rem? 
+                Alias laborum natus enim! Alias soluta perspiciatis sequi quasi odit iure?
+            `,
+            link: "https://vuvufelix.github.io/Tela-de-login-com-autentica-o/"
+        }
+    ];
+
+    function showDetails(project) {
         GlobalData.setShowModel(true);
+        let projectFound = portfolioProjects.find((myProject) => myProject.id === project.id);
+        GlobalData.setPortfolio(projectFound);
     }
 
     return (
         <main>
-            <section className="Home-container">
-                <div className="first-content">
-                    <span>Olá, Eu sou o</span>
-                    <strong>vuvu félix miguel joão</strong>
-                    <small>Sou um Desenvolvedor Web</small>
-                    <p>
-                        Desenvolvedor front-end apaixonado por criar interfaces web e mobile inovadoras com React.js e React Native, sempre em busca de contribuir para projetos desafiadores. 
-                    </p>
-                    <div className="button-first-content">
-                        <button>Ligar Agora <BsFillTelephoneFill /></button>
-                        <button className="cv">Baixar currículo<FaDownload /> </button>
-                    </div>
-                </div>
+
+            <HomeContainer>
+                <HomeContent />
                 <img src={vuvu} alt="imagem vuvu félix" style={{height: "350px"}}/>
-            </section>
+            </HomeContainer>
 
-            <div className="carousel">
-                <div className="group">
-                    <IoLogoJavascript className="card"/>
-                    <FaHtml5 className="card"/>
-                    <SiCss3 className="card"/>
-                    <RiReactjsLine className="card"/>
-                    <FaGitAlt className="card"/>
-                    <FaGithub className="card"/>
-                    <FaNode className="card"/>
-                    <RiTailwindCssFill className="card"/>
-                    <SiExpress className="card"/>
-                    <TbBrandReactNative className="card"/>
-                    <SiTypescript className="card"/>
-                    <SiMysql className="card"/>
-                </div>
-                <div className="group">
-                    <IoLogoJavascript className="card" />
-                    <FaHtml5 className="card"/>
-                    <SiCss3 className="card"/>
-                    <RiReactjsLine className="card"/>
-                    <FaGitAlt className="card"/>
-                    <FaGithub className="card"/>
-                    <FaNode className="card"/>
-                    <RiTailwindCssFill className="card"/>
-                    <SiExpress className="card"/>
-                    <TbBrandReactNative className="card"/>
-                    <SiTypescript className="card"/>
-                    <SiMysql className="card"/>
-                </div>
-            </div>
+            <Carousel>
+                <Group>
+                    {iconCarousel.map(iconType => {
+                        return iconType
+                    })}
+                </Group>
+                <Group>
+                    {iconCarousel.map(iconType => {
+                        return iconType
+                    })}
+                </Group>
+            </Carousel>
 
-            <section className="about-container">
-                <h2>About<span style={{color: "skyblue"}}> .</span></h2>
-                <div className="about-container-info">
-                    <img src={build} alt="" className="image-about"/>
-                    <article className="about-content">
-                        <p>
-                            Olá! Sou o Félix, um apaixonado por tecnologia que, nos tempos livres, adora ir à academia. Desde 2023, mergulhei de cabeça no mundo do desenvolvimento de software, atuando como desenvolvedor front-end. De lá para cá, tenho me dedicado continuamente à busca por novos conhecimentos na área de TI, com especial interesse em desenvolvimento web e mobile. No desenvolvimento web, meus estudos e experiências se concentram no framework React.js, enquanto no desenvolvimento mobile, foco no React Native.
-                        </p>
-                        <p>
-                            Atualmente presto serviços com a Huber Cargas Express, uma startup que conecta motoristas e produtores através de um sistema digital de fretes. Atuo no desenvolvimento da aplicação, desde a interface do usuário até a lógica do servidor, utilizando JavaScript, React, Node.js e MySQL. O objetivo é criar uma plataforma ágil, segura e intuitiva para otimizar o transporte de cargas.
-                        </p>
-                    </article>
-                </div>
-            </section>
+            <AboutContainer>
+                <AboutContainerInfo>
+                    <About 
+                    image={build} 
+                    p1={`
+                        Olá! Sou o Félix, um apaixonado por tecnologia que, nos tempos livres, adora ir à academia. Desde 2023, 
+                        mergulhei de cabeça no mundo do desenvolvimento de software, atuando como desenvolvedor front-end. 
+                        De lá para cá, tenho me dedicado continuamente à busca por novos conhecimentos na área de TI, 
+                        com especial interesse em desenvolvimento web e mobile. No desenvolvimento web, 
+                        meus estudos e experiências se concentram no framework React.js,
+                        enquanto no desenvolvimento mobile, foco no React Native.
+                    `}
+                    p2={`
+                        Atualmente presto serviços com a Huber Cargas Express, uma startup que conecta motoristas e 
+                        produtores através de um sistema digital de fretes. Atuo no desenvolvimento da aplicação, 
+                        desde a interface do usuário até a lógica do servidor, utilizando JavaScript, React, Node.js e MySQL. 
+                        O objetivo é criar uma plataforma ágil, segura e intuitiva para otimizar o transporte de cargas.
+                    `}
+                />
+                </AboutContainerInfo>
+            </AboutContainer>
 
-            <section className="skills-container">
-                <h2>Skills<span style={{color: "skyblue"}}> .</span></h2>
-                <p>Tecnologias com as quais trabalho para criar soluções digitais modernas.</p>
-                <div>
-                    <span>Frontend <FaBolt style={{color: "orange"}}/> </span>
-                    <span>Backend <AiFillDatabase style={{color: "green"}}/> </span>
-                    <span>Databases <FaDatabase style={{color: "yellow"}}/> </span>
-                    <span>Ferramentas <RiToolsFill style={{color: "gren"}}/> </span>
-                </div>
-
-                <section className="skills-container-section">
-                    <div className="skill">
-                        <RiReactjsLine style={{fontSize: "2.5rem", color: "skyblue"}}/>
-                        <span>React js</span>
-                        <span className="leavel">Intermediário</span>
-                    </div>
-                    <div className="skill">
-                        <SiTypescript style={{fontSize: "2.5rem", color: "blue"}}/>
-                        <span>TypeScript</span>
-                        <span className="leavel">Intermediário</span>
-                    </div>
-                    <div className="skill">
-                        <FaHtml5 style={{fontSize: "2.5rem", color: "red"}}/>
-                        <span>HTML5</span>
-                        <span className="leavel">Avançado</span>
-                    </div>
-                    <div className="skill">
-                        <SiCss3 style={{fontSize: "2.5rem", color: "blue"}}/>
-                        <span>CSS3</span>
-                        <span className="leavel">Avançado</span>
-                    </div>
-                    <div className="skill">
-                        <TbBrandReactNative style={{fontSize: "2.5rem", color: "blue"}}/>
-                        <span>React Native</span>
-                        <span className="leavel">Intermediário</span>
-                    </div>
-                    <div className="skill">
-                        <IoLogoJavascript style={{fontSize: "2.5rem", color: "yellow"}}/>
-                        <span>JavaScript</span>
-                        <span className="leavel">Intermediário</span>
-                    </div>
-                    <div className="skill">
-                        <GrMysql style={{fontSize: "2.5rem", color: "blue"}}/>
-                        <span>MySQL</span>
-                        <span className="leavel">Intermediário</span>
-                    </div>
-                    <div className="skill">
-                        <FaNode style={{fontSize: "2.5rem", color: "green"}}/>
-                        <span>Node.js</span>
-                        <span className="leavel">Intermediário</span>
-                    </div>
-                    <div className="skill">
-                        <SiExpress style={{fontSize: "2.5rem", color: "black"}}/>
-                        <span>Express.js</span>
-                        <span className="leavel">Intermediário</span>
-                    </div>
-                    <div className="skill">
-                        <FaGitAlt style={{fontSize: "2.5rem", color: "red"}}/>
-                        <span>Git</span>
-                        <span className="leavel">Avançado</span>
-                    </div>
-                    <div className="skill">
-                        <RiTailwindCssFill style={{fontSize: "2.5rem", color: "skyblue"}}/>
-                        <span>Tailwind CSS</span>
-                        <span className="leavel">Intermediário</span>
-                    </div>
-                    <div className="skill">
-                        <FaGithub style={{fontSize: "2.5rem", color: "black"}}/>
-                        <span>GitHub</span>
-                        <span className="leavel">Avançado</span>
-                    </div>
-                </section>
-            </section>
-
-            <section className="portfolio-container">
-                <h2>Portfolio<span style={{color: "skyblue"}}> .</span></h2>
-                <div className="portfolio-container-projects">
-                    <div className="project">
-                        <div className="project-icons">
-                            <FaNode className="newI" style={{ color: "green"}}/>
-                            <SiCss3 className="newI" style={{color: "blue"}}/>
-                            <IoLogoJavascript className="newI" style={{color: "yellow"}}/>
-                            <RiReactjsLine className="newI" style={{color: "skyblue"}}/>
-                        </div>
-                        <div className="project-image" onClick={() => showDetails()}>
-                            <img src={neneth} alt="imagem do projeto" />
-                        </div>
-                        <span>Neneth</span>
-                    </div>
-
-                    <div className="project">
-                        <div className="project-icons">
-                            <SiCss3 className="newI" style={{color: "blue"}}/>
-                            <IoLogoJavascript className="newI" style={{color: "yellow"}}/>
-                            <RiReactjsLine className="newI" style={{color: "skyblue"}}/>
-                        </div>
-                        <div className="project-image">
-                            <img src={imageProject1} alt="imagem do projeto" />
-                        </div>
-                        <span>HairDay</span>
-                    </div>
-
-                    <div className="project">
-                        <div className="project-icons">
-                            <SiCss3 className="newI" style={{color: "blue"}}/>
-                            <IoLogoJavascript className="newI" style={{color: "yellow"}}/>
-                            <RiReactjsLine className="newI" style={{color: "skyblue"}}/>
-                        </div>
-                        <div className="project-image">
-                            <img src={ferMovie} alt="imagem do projeto" />
-                        </div>
-                        <span>FerMovie</span>
-                    </div>
-
-                    <div className="project">
-                        <div className="project-icons">
-                            <FaHtml5  className="newI" style={{color: "red"}}/>
-                            <SiCss3 className="newI" style={{color: "blue"}}/>
-                            <IoLogoJavascript className="newI" style={{color: "yellow"}}/>
-                        </div>
-                        <div className="project-image">
-                            <img src={quiz} alt="imagem do projeto" />
-                        </div>
-                        <span>Quiz javaScript</span>
-                    </div>
-
-                    <div className="project">
-                        <div className="project-icons">
-                            <FaHtml5  className="newI" style={{color: "red"}}/>
-                            <SiCss3 className="newI" style={{color: "blue"}}/>
-                            <IoLogoJavascript className="newI" style={{color: "yellow"}}/>
-                        </div>
-                        <div className="project-image">
-                            <img src={agend} alt="imagem do projeto" />
-                        </div>
-                        <span>Lending page de agendamento</span>
-                    </div>
-
-                    <div className="project">
-                        <div className="project-icons">
-                            <FaHtml5  className="newI" style={{color: "red"}}/>
-                            <SiCss3 className="newI" style={{color: "blue"}}/>
-                            <IoLogoJavascript className="newI" style={{color: "yellow"}}/>
-                        </div>
-                        <div className="project-image">
-                            <img src={login} alt="imagem do projeto" />
-                        </div>
-                        <span>Tela de login com autenticação</span>
-                    </div>
-                </div>
-            </section>
-            <section className="contact-container">
-                <h2>Contact<span style={{color: "skyblue"}}> .</span></h2>
-                <div className="contact-info">
-                    <div className="other-contacts">
-                        <span>Conecte-se comigo</span>
-                        <p>
-                            Estou disponível para novos projetos e colaborações. Sinta-se avontade para me enviar uma mensagem.
-                        </p>
-                        <div className="contacts">
-                            <MdEmail className="icon"/>
-                            <div className="my-contacts">
-                                <span>Email</span>
-                                <a href="#">vuvufelix2018@gmail.com</a>
+            <SkillContainer>
+                <SkillContainerSection>
+                    {skillsArray.map((skill, index) => {
+                        return (
+                            <div key={index} className="skill">
+                                {skill.icon}
+                                <span>{skill.name}</span>
+                                <span className="leavel">{skill.leavel}</span>
                             </div>
-                        </div>
+                        )
+                    })}
+                </SkillContainerSection>
+            </SkillContainer>
 
-                        <div className="contacts">
-                            <BsFillTelephoneFill className="icon"/>
-                            <div className="my-contacts">
-                                <span>Telefone</span>
-                                <a href="#">929442549</a>
+            <PortfolioContainer>
+                <PortfolioContainerProjects>
+                    {portfolioProjects.map((project, index) => {
+                        return (
+                            <div className="project" key={index}>
+                                <div className="project-icons">
+                                    {project.icons.map(icon => icon)}
+                                </div>
+                                <div className="project-image" onClick={() => showDetails(project)}>
+                                    <img src={project.image} alt={project.name} />
+                                </div>
+                                <span>{project.name}</span>
                             </div>
-                        </div>
+                        )
+                    })}
+                </PortfolioContainerProjects>
+            </PortfolioContainer>
 
-                        <div className="contacts">
-                            <BsLinkedin className="icon"/>
-                            <div className="my-contacts">
-                                <span>LinkedIn</span>
-                                <a href="#">Vuvu Félix</a>
-                            </div>
-                        </div>
-                    </div>
-                    <form className="container-form">
-                        <div className="form-line">
-                            <div>
-                                <label htmlFor="name">Nome</label>
-                                <input type="text" name="name" id="name" />
-                            </div>
-                            <div>
-                                <label htmlFor="email">E-mail</label>
-                                <input type="email" name="email" id="email" />
-                            </div>
-                        </div>
-                        <div className="form-lines">
-                            <label htmlFor="summary">Assunto</label>
-                            <input type="text" name="summary" id="summary" />
-                        </div>
-                        <div className="form-lines">
-                            <label htmlFor="sms">Mensagem</label>
-                            <textarea name="sms" id="sms"></textarea>
-                        </div>
-                        <button>Enviar Mensagem</button>
-                    </form>
-                </div>
-            </section>
+            <ContactContainer>
+                <ContactInfo>
+                    <OtherContacts />
+                    <FormContainer />
+                </ContactInfo>
+            </ContactContainer>
         </main>
     )
 }

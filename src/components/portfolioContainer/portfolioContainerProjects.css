@@ -1,13 +1,4 @@
-.portfolio-container {
-    margin-top: 5em;
-}
-
-.portfolio-container > h2 {
-    font-size: 2.7rem;
-    text-align: center;
-}
-
-.portfolio-container > .portfolio-container-projects {
+.portfolio-container-projects {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;

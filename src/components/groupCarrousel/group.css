@@ -1,0 +1,26 @@
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+    animation: spin 9s infinite linear;
+    padding-right: 1em;
+}
+
+.card {
+    flex: 0 0 1em;
+    height: 3rem;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: skyblue;
+    text-align: center;
+    align-content: center;
+}
+
+@keyframes spin {
+    from {
+        translate: 0;
+    } to {
+        translate: -100%;
+    }
+}

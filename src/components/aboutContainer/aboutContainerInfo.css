@@ -1,0 +1,20 @@
+.about-container-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-container-info > .image-about {
+    width: 48%;
+    filter: brightness(0.4);
+}
+
+.about-container-info > .about-content {
+    width: 65%;
+}
+
+.about-container-info > .about-content > p {
+    text-align: justify;
+    line-height: 1.5em;
+    font-size: 0.95rem;
+}

@@ -2,6 +2,7 @@ import SpaceBackground from "./components/SpaceBackground";
 import Header from "./layouts/header/Header.jsx";
 import Main from "./layouts/main/Main.jsx";
 import Models from "./components/model/Models.jsx";
+import Footer from "./layouts/footer/Footer.jsx";
 
 import { useState } from "react";
 import { useContext } from "react";
@@ -36,6 +37,7 @@ function App() {
         </Header>
         <Main/>
         {GlobalData.showModel && <Models/> }
+        <Footer />
       </div>
     </div>
   );
