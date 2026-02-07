@@ -7,7 +7,7 @@ import imageProject1 from "../../assets/imagemProject.png";
 import neneth from "../../assets/nenet.png";
 import ferMovie from "../../assets/ferMovie.png";
 import quiz from "../../assets/quiz.jpg";
-import agend from "../../assets/agendamento.png";
+import agend from "../../assets/agendamento.jpg";
 import login from "../../assets/login.png";
 
 // Icones
@@ -139,9 +139,9 @@ const Main = () => {
                 <RiReactjsLine className="newI" style={{color: "skyblue"}}/>
             ],
             image: neneth,
-            description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, 
-                repudiandae fugit tempore qui corporis labore maiores animi architecto rem? 
-                Alias laborum natus enim! Alias soluta perspiciatis sequi quasi odit iure?
+            description: `Este é um projeto de E-commerce moderno e responsivo construído integralmente com ReactJS. 
+                Ele simula o fluxo de compra de ponta a ponta, desde a listagem de produtos até a finalização do pedido, 
+                utilizando tecnologias atuais para gerenciamento de estado e requisições assíncronas.
             `,
             link: "https://nenet.vercel.app"
         },
@@ -154,9 +154,9 @@ const Main = () => {
                 <RiReactjsLine className="newI" style={{color: "skyblue"}}/>
             ],
             image: imageProject1,
-            description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, 
-                repudiandae fugit tempore qui corporis labore maiores animi architecto rem? 
-                Alias laborum natus enim! Alias soluta perspiciatis sequi quasi odit iure?
+            description: `O HairDay é uma aplicação web moderna e intuitiva, desenvolvida em React, 
+                focada em simplificar o agendamento de serviços de beleza (cortes de cabelo) e a gestão diária da agenda. 
+                Utiliza uma interface limpa e escura que facilita a visualização dos compromissos por período (Manhã, Tarde e Noite).
             `,
             link: "https://hair-day-three.vercel.app"
         },
@@ -169,9 +169,8 @@ const Main = () => {
                 <RiReactjsLine className="newI" style={{color: "skyblue"}}/>
             ],
             image: ferMovie,
-            description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, 
-                repudiandae fugit tempore qui corporis labore maiores animi architecto rem? 
-                Alias laborum natus enim! Alias soluta perspiciatis sequi quasi odit iure?
+            description: `A aplicação permite visualizar os melhores filmes avaliados, assistir aos 
+                trailers mais recentes e explorar detalhes de cada título — tudo isso com um design moderno e interativo.
             `,
             link: "https://fer-movie.vercel.app"
         },
@@ -184,9 +183,9 @@ const Main = () => {
                 <IoLogoJavascript className="newI" style={{color: "yellow"}}/>
             ],
             image: quiz,
-            description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, 
-                repudiandae fugit tempore qui corporis labore maiores animi architecto rem? 
-                Alias laborum natus enim! Alias soluta perspiciatis sequi quasi odit iure?
+            description: `This is an application focused on teaching JavaScript while you have fun. 
+                After finishing the quiz, it is possible to view your evaluation, which is rated from 0 to 100%. 
+                If the user scores below 50%, they will automatically fail.
             `,
             link: "https://vuvufelix.github.io/Quiz-Javascript/"
         },
@@ -199,9 +198,8 @@ const Main = () => {
                 <IoLogoJavascript className="newI" style={{color: "yellow"}}/>
             ],
             image: agend,
-            description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, 
-                repudiandae fugit tempore qui corporis labore maiores animi architecto rem? 
-                Alias laborum natus enim! Alias soluta perspiciatis sequi quasi odit iure?
+            description: `This is an application, specifically a modern and responsive fictional 
+                landing page that displays information about booking services in Angola and abroad.
             `,
             link: "https://vuvufelix.github.io/servi-o-de-agendamento/"
         },
@@ -214,9 +212,9 @@ const Main = () => {
                 <IoLogoJavascript className="newI" style={{color: "yellow"}}/>
             ],
             image: login,
-            description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, 
-                repudiandae fugit tempore qui corporis labore maiores animi architecto rem? 
-                Alias laborum natus enim! Alias soluta perspiciatis sequi quasi odit iure?
+            description: `A modern web registration and login application developed to demonstrate secure user authentication. 
+                The project uses Firebase Authentication to manage accounts, providing a fluid user experience and a robust backend 
+                without the need for a custom server.
             `,
             link: "https://vuvufelix.github.io/Tela-de-login-com-autentica-o/"
         }

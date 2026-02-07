@@ -2,6 +2,7 @@ import "./homeContent.css";
 
 import { FaDownload } from "react-icons/fa";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import cv from "../../assets/curriculo.pdf";
 
 const HomeContent = () => {
     return (
@@ -13,8 +14,12 @@ const HomeContent = () => {
                 Desenvolvedor front-end apaixonado por criar interfaces web e mobile inovadoras com React.js e React Native, sempre em busca de contribuir para projetos desafiadores. 
             </p>
             <div className="button-first-content">
-                <button>Ligar Agora <BsFillTelephoneFill /></button>
-                <button className="cv">Baixar currículo<FaDownload /> </button>
+                <a href="tel:+244929442549" target="_blank" rel="external">
+                    Ligar Agora <BsFillTelephoneFill />
+                </a>
+                <a href={cv} download="curriculo.pdf" target="_blank" rel="external" className="cv">
+                    Baixar currículo<FaDownload />
+                </a>
             </div>
         </div>
     )

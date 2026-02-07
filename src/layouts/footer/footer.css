@@ -3,6 +3,7 @@ footer {
     width: 85%;
     margin: 2.7rem auto 0 auto;
     border-top: 1px solid #0909c4a1;
+    border-top-style: dashed;
 }
 
 .footer-container-social {

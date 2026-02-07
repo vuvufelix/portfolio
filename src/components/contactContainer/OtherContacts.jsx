@@ -15,7 +15,7 @@ const OtherContacts = () => {
                 <MdEmail className="icon"/>
                 <div className="my-contacts">
                     <span>Email</span>
-                    <a href="#">vuvufelix2018@gmail.com</a>
+                    <a href="mailto:vuvufelix2018@gmail.com">vuvufelix2018@gmail.com</a>
                 </div>
             </div>
         
@@ -23,7 +23,7 @@ const OtherContacts = () => {
                 <BsFillTelephoneFill className="icon"/>
                 <div className="my-contacts">
                     <span>Telefone</span>
-                    <a href="#">929442549</a>
+                    <a href="tel:+244929442549">929442549</a>
                 </div>
             </div>
         
@@ -31,7 +31,7 @@ const OtherContacts = () => {
                 <BsLinkedin className="icon"/>
                 <div className="my-contacts">
                     <span>LinkedIn</span>
-                    <a href="#">Vuvu Félix</a>
+                    <a href="https://www.linkedin.com/in/vuvu-f%C3%A9lix-6a09a42a3/" target="_blank" rel="external">Vuvu Félix</a>
                 </div>
             </div>
         </div>

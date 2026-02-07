@@ -12,13 +12,13 @@ const Footer = () => {
                 <div className="social-container">
                     <span>Redes Sociais</span>
                     <div className="social">
-                        <a href="#">
+                        <a href="https://www.facebook.com/gabrielfelix.feliboy" target="_blank" rel="external">
                             <FaFacebookSquare className="social-media fb"/>
                         </a>
-                        <a href="#">
+                        <a href="https://github.com/vuvufelix" target="_blank" rel="external">
                             <FaGithub className="social-media gitb"/>
                         </a>
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/vuvu-f%C3%A9lix-6a09a42a3/" target="_blank" rel="external">
                             <BsLinkedin className="social-media ldin"/>
                         </a>
                     </div>
