@@ -4,7 +4,7 @@ import Main from "./layouts/main/Main.jsx";
 import Models from "./components/model/Models.jsx";
 import Footer from "./layouts/footer/Footer.jsx";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useContext } from "react";
 import GlobalContext from "./context/globalContext.jsx";
 
@@ -15,9 +15,26 @@ function App() {
 
   const [menu, setMenu] = useState("Home");
 
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const portfolioRef = useRef(null);
+  const contactRef = useRef(null);
+
   const GlobalData = useContext(GlobalContext);
 
-  const optionsMenu = ["Home", "About", "Skills", "Portfolio", "Contact"];
+  const optionsMenu = [
+    {nav: "Home", scroll: GlobalData.homeRef},
+    {nav: "About", scroll: GlobalData.aboutRef},
+    {nav: "Skills", scroll: GlobalData.skillsRef},
+    {nav: "Portfolio", scroll: GlobalData.portfolioRef},
+    {nav: "Contact", scroll: GlobalData.contactRef},
+  ]
+
+  const scrollToSection = (elementRef, menuItem) => {
+    setMenu(menuItem)
+    elementRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
 
   return (
     <div className="App" style={{ position: "relative", zIndex: 1, color: "white"}}>
@@ -31,7 +48,15 @@ function App() {
           </div>
           <div className="menu-container">
             {optionsMenu.map((menuItem, index) => {
-              return <a key={ index } className={menuItem === menu ? "active" : ""}  onClick={() => setMenu(menuItem)} href="#">{ menuItem }</a>
+              return (
+                <button 
+                  key={ index } 
+                  className={menuItem.nav === menu ? "active" : ""}  
+                  onClick={() => scrollToSection(menuItem.scroll, menuItem.nav)} 
+                >
+                  { menuItem.nav }
+                </button>
+              )
             })}
           </div>
         </Header>

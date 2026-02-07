@@ -1,8 +1,14 @@
 import "./skillContainerSection.css";
 
+import { useContext } from "react";
+import GlobalContext from "../../context/globalContext";
+
 const SkillContainerSection = ({ children }) => {
+
+    const GlobalData = useContext(GlobalContext);
+
     return (
-        <section className="skills-container-section">
+        <section ref={GlobalData.skillsRef} className="skills-container-section">
             { children }
         </section>
     )
