@@ -231,7 +231,7 @@ const Main = () => {
 
             <HomeContainer>
                 <HomeContent />
-                <img src={vuvu} alt="imagem vuvu félix" style={{height: "350px"}}/>
+                <img src={vuvu} alt="imagem vuvu félix" style={{height: "350px"}} className="my-img"/>
             </HomeContainer>
 
             <Carousel>

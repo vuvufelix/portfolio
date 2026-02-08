@@ -5,7 +5,27 @@ import { AiFillDatabase } from "react-icons/ai";
 import { FaDatabase } from "react-icons/fa6";
 import { RiToolsFill } from "react-icons/ri";
 
+import ScrollReveal from 'scrollreveal';
+import { useEffect } from "react";
+
 const SkillContainer = ({ children }) => {
+
+    useEffect(() => {
+        const sr = ScrollReveal({
+            distance: '60px',
+            duration: 1000,
+            delay: 200,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)', // Deixa o movimento mais "elástico"
+            reset: true
+        });
+
+        // A mágica acontece aqui no 'interval'
+        sr.reveal('.skill', { 
+            origin: 'bottom', 
+            interval: 100 // Intervalo de 100ms entre cada item
+        });
+    }, []);
+
     return (
         <div className="skills-container">
             <h2>Skills<span style={{color: "skyblue"}}> .</span></h2>
