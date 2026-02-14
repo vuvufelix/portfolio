@@ -18,3 +18,27 @@
     line-height: 1.5em;
     font-size: 0.95rem;
 }
+
+@media screen and (max-width: 700px) {
+
+    .about-container-info {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .about-container-info > .image-about {
+        width: 100%;
+        filter: brightness(0.4);
+    }
+
+    .about-container-info > .about-content {
+        width: 85%;
+        margin-bottom: 3rem;
+    }
+
+    .about-container-info > .about-content > p {
+        font-size: 0.9rem;
+    }
+
+}

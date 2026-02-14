@@ -43,21 +43,23 @@ function App() {
       {/* O conteúdo do seu portfólio vem aqui */}
       <div className="content" style={{ position: "relative", zIndex: 1, color: "white"}}>
         <Header>
-          <div className="title-container">
-            <h1>Dev<strong>Félix{"/>"} </strong></h1>
-          </div>
-          <div className="menu-container">
-            {optionsMenu.map((menuItem, index) => {
-              return (
-                <button 
-                  key={ index } 
-                  className={menuItem.nav === menu ? "active" : ""}  
-                  onClick={() => scrollToSection(menuItem.scroll, menuItem.nav)} 
-                >
-                  { menuItem.nav }
-                </button>
-              )
-            })}
+          <div>
+            <div className="title-container">
+              <h1>Dev<strong>Félix{"/>"} </strong></h1>
+            </div>
+            <div className="menu-container">
+              {optionsMenu.map((menuItem, index) => {
+                return (
+                  <button 
+                    key={ index } 
+                    className={menuItem.nav === menu ? "active" : ""}  
+                    onClick={() => scrollToSection(menuItem.scroll, menuItem.nav)} 
+                  >
+                    { menuItem.nav }
+                  </button>
+                )
+              })}
+            </div>
           </div>
         </Header>
         <Main/>

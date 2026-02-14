@@ -69,3 +69,29 @@
     background-color: #6f0bb1bd;
     color: gray;
 }
+
+@media screen and (max-width: 700px) {
+
+    .container-form {
+        width: 85%;
+        padding: 1rem;
+    }
+
+    .contact-container > .contact-info > .container-form > .form-line {
+        gap: 0.5rem;
+    }
+
+    .contact-container > .contact-info > .container-form > .form-line > div {
+        gap: 0.2rem;
+        width: calc(50% - 0.2rem);
+    }
+
+    .container-form label{
+        font-size: 0.9rem;
+    }
+
+    .contact-container > .contact-info > .container-form > button {
+        font-size: 0.8rem;
+    }
+
+}

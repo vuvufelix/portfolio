@@ -53,3 +53,30 @@
 .other-contacts > .contacts > .my-contacts > a:hover {
     text-decoration: underline;
 }
+
+@media screen and (max-width: 700px) {
+
+    .other-contacts {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        margin-bottom: 3rem;
+    }
+
+    .other-contacts > span {
+        font-size: 1rem;
+    }
+
+    .other-contacts > p {
+        font-size: 0.9rem;
+    }
+
+    .other-contacts > .contacts > .icon {
+        font-size: 1.2rem;
+    }
+
+    .other-contacts > .contacts > .my-contacts {
+        font-size: 0.9rem;
+    }
+
+}

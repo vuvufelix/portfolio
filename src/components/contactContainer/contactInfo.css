@@ -3,3 +3,14 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@media screen and (max-width: 700px) {
+
+    .contact-container > .contact-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+}

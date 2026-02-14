@@ -1,8 +1,7 @@
 header {
     background-color: #0505795d;
-    width: 85%;
-    padding: 0.3rem 1.7rem ;
-    display: block;
+    width: 85vw;
+    padding: 0.3rem 1.7rem;
     margin: 1rem auto 0 auto;
     border-radius: 1.5rem;
     border: 1px solid #0c0c77;
@@ -12,40 +11,51 @@ header {
     top: 1rem;
     z-index: 2;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: block;
+    
 
-    .title-container > h1 {
-        font-size: 1.3rem;
-    }
-
-    .title-container strong {
-        color: skyblue;
-    }
-
-    .menu-container {
+    div {
         display: flex;
-        gap: 2.5rem;
-
-        button {
-            color: #fff;
-            text-decoration: none;
-            transition: .4s;
-            background-color: transparent;
-            font-weight: bold;
-            border: none;
-            font-size: 1rem;
-            cursor: pointer;
+        justify-content: space-between;
+        align-items: center;
+        
+        .title-container > h1 {
+            font-size: 1.3rem;
         }
 
-        button:hover {
+        .title-container strong {
             color: skyblue;
         }
 
-        button.active {
-            color: skyblue;
-            font-style: italic;
+        .menu-container {
+            display: flex;
+            gap: 2.5rem;
+
+            button {
+                color: #fff;
+                text-decoration: none;
+                transition: .4s;
+                background-color: transparent;
+                font-weight: bold;
+                border: none;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+
+            button:hover {
+                color: skyblue;
+            }
+
+            button.active {
+                color: skyblue;
+                font-style: italic;
+            }
         }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    header {
+        width: 87vw;
     }
 }

@@ -67,62 +67,62 @@ const Main = () => {
 
     const skillsArray = [
         {
-            icon: <RiReactjsLine style={{fontSize: "2.5rem", color: "skyblue"}}/>,
+            icon: <RiReactjsLine className="icon-skill" style={{color: "skyblue"}}/>,
             name: "React js",
             leavel: "Intermediário"
         },
         {
-            icon: <SiTypescript style={{fontSize: "2.5rem", color: "blue"}}/>,
+            icon: <SiTypescript className="icon-skill" style={{color: "blue"}}/>,
             name: "TypeScript",
             leavel: "Intermediário"
         },
         {
-            icon: <FaHtml5 style={{fontSize: "2.5rem", color: "red"}}/>,
+            icon: <FaHtml5 className="icon-skill" style={{color: "red"}}/>,
             name: "HTML5",
             leavel: "Avançado"
         },
         {
-            icon: <SiCss3 style={{fontSize: "2.5rem", color: "blue"}}/>,
+            icon: <SiCss3 className="icon-skill" style={{color: "blue"}}/>,
             name: "CSS3",
             leavel: "Avançado"
         },
         {
-            icon: <TbBrandReactNative style={{fontSize: "2.5rem", color: "blue"}}/>,
+            icon: <TbBrandReactNative className="icon-skill" style={{color: "blue"}}/>,
             name: "React Native",
             leavel: "Intermediário"
         },
         {
-            icon: <IoLogoJavascript style={{fontSize: "2.5rem", color: "yellow"}}/>,
+            icon: <IoLogoJavascript className="icon-skill" style={{color: "yellow"}}/>,
             name: "JavaScript",
             leavel: "Intermediário"
         },
         {
-            icon: <GrMysql style={{fontSize: "2.5rem", color: "blue"}}/>,
+            icon: <GrMysql className="icon-skill" style={{color: "blue"}}/>,
             name: "MySQL",
             leavel: "Intermediário"
         },
         {
-            icon: <FaNode style={{fontSize: "2.5rem", color: "green"}}/>,
+            icon: <FaNode className="icon-skill" style={{color: "green"}}/>,
             name: "Node.js",
             leavel: "Intermediário"
         },
         {
-            icon: <SiExpress style={{fontSize: "2.5rem", color: "black"}}/>,
+            icon: <SiExpress className="icon-skill" style={{color: "black"}}/>,
             name: "Express.js",
             leavel: "Intermediário"
         },
         {
-            icon: <FaGitAlt style={{fontSize: "2.5rem", color: "red"}}/>,
+            icon: <FaGitAlt className="icon-skill" style={{color: "red"}}/>,
             name: "Git",
             leavel: "Avançado"
         },
         {
-            icon: <RiTailwindCssFill style={{fontSize: "2.5rem", color: "skyblue"}}/>,
+            icon: <RiTailwindCssFill className="icon-skill" style={{color: "skyblue"}}/>,
             name: "Tailwind CSS",
             leavel: "Intermediário"
         },
         {
-            icon: <FaGithub style={{fontSize: "2.5rem", color: "black"}}/>,
+            icon: <FaGithub className="icon-skill" style={{color: "black"}}/>,
             name: "GitHub",
             leavel: "Avançado"
         }

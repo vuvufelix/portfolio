@@ -3,8 +3,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 0.5rem;
-
-    width: 50%;
+    width: 50%
 }
 
 .first-content > span {
@@ -26,6 +25,7 @@
 .first-content  > p {
     text-align: justify;
     line-height: 1.5rem;
+    width: 100%;
 }
 
 .first-content > .button-first-content {
@@ -64,4 +64,47 @@
     border: 1px solid #3691b4;
     border-width: 0.1rem;
     color: #fff;
+}
+
+
+
+@media screen and (max-width: 700px) {
+
+    .first-content  {
+        width: 85%;
+        margin-bottom: 5rem;
+    }
+
+    .first-content > span {
+        font-size: 0.9rem;
+    }
+
+    .first-content > strong {
+        font-size: 2rem;
+    }
+
+    .first-content > small {
+        font-size: 0.9rem;
+    }
+
+    .first-content  > p {
+        font-size: 0.9rem;
+    }
+
+    .first-content > .button-first-content > a {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.6rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .first-content > strong {
+        font-size: 1.5rem;
+    }
+
 }

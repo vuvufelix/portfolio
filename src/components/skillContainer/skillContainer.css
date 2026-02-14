@@ -31,3 +31,27 @@
     align-items: center;
     gap: 0.5rem
 }
+
+@media screen and (max-width: 700px) {
+    .skills-container {
+        width: 100%;
+    }
+
+    .skills-container > p {
+        font-size: 0.9rem;
+    }
+
+    .skills-container > h2 {
+        font-size: 2rem;
+    }
+
+    .skills-container > div {
+        gap: 0.6rem;
+        width: 100%
+    }
+
+    .skills-container > div > span {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.6rem;
+    }
+}

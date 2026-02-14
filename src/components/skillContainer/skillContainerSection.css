@@ -35,3 +35,36 @@
     font-size: 0.8rem;
     color: #6f0bb1;
 }
+
+.icon-skill {
+    font-size: 2.5rem;
+}
+
+@media screen and (max-width: 700px) {
+
+    .skills-container-section {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skills-container-section > .skill {
+        padding: 2rem;
+        gap: 0.7rem;
+        width: calc(85% / 2.95);
+    }
+
+    .skills-container-section > .skill > span {
+        font-size: 0.9rem;
+    }
+
+    .skills-container-section > .skill > span.leavel {
+        font-size: 0.6rem;
+    }
+
+    .icon-skill {
+        font-size: 2rem;
+    }
+    
+}

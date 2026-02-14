@@ -56,3 +56,20 @@
     transform: scale(1.2);
     filter: brightness(0.5);
 }
+
+@media screen and (max-width: 700px) {
+
+    .portfolio-container-projects {
+        gap: 1rem;
+        justify-content: flex-start;
+    }
+
+    .portfolio-container > .portfolio-container-projects > .project {
+        width: 100%;
+    }
+
+    .portfolio-container > .portfolio-container-projects > .project > span {
+        font-size: 1rem;
+    }
+
+}
