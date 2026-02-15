@@ -46,7 +46,7 @@ function App() {
   }
 
   return (
-    <div className="App" style={{ position: "relative", zIndex: 1, color: "white"}}>
+    <div>
       <SpaceBackground />
       
       {/* O conteúdo do seu portfólio vem aqui */}

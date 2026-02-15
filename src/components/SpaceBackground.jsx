@@ -21,6 +21,7 @@ const SpaceBackground = () => {
       },
     },
     fpsLimit: 30,
+    detectRetina: true,
     particles: {
       number: {
         value: 40, // Quantidade de estrelas/partículas

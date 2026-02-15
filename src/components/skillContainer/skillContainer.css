@@ -55,3 +55,10 @@
         font-size: 0.6rem;
     }
 }
+
+@media screen and (max-width: 410px) {
+    .skills-container > div > span {
+        padding: 0.2rem 0.3rem;
+        font-size: 0.5rem;
+    }
+}
