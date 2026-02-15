@@ -20,10 +20,10 @@ const SpaceBackground = () => {
         value: "linear-gradient(180deg, #000000ff 25%, #1b2a6b 75%)", // Azul bem escuro (cor do espaço)
       },
     },
-    fpsLimit: 120,
+    fpsLimit: 30,
     particles: {
       number: {
-        value: 150, // Quantidade de estrelas/partículas
+        value: 40, // Quantidade de estrelas/partículas
         density: {
           enable: true,
           area: 800,
@@ -34,32 +34,16 @@ const SpaceBackground = () => {
       },
       shape: {
         type: "star",
-        options: {
-            star: {
-                sides: 4,
-            }
-        }
       },
       opacity: {
-        value: { min: 0.3, max: 0.8 }, // Algumas brilham mais que outras
-        animation: {
-          enable: true,
-          speed: 1,
-          sync: false,
-        },
+        value: 0.8
       },
       size: {
         value: { min: 1, max: 2 }, // Tamanhos variados para profundidade
       },
       move: {
         enable: true,
-        speed: 0.5, // Movimento lento e suave
-        direction: "none",
-        random: true,
-        straight: false,
-        outModes: {
-          default: "out",
-        },
+        speed: 0.3, // Movimento lento e suave
       },
     },
     interactivity: {
