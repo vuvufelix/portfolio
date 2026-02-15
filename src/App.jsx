@@ -8,18 +8,17 @@ import { useState, useRef } from "react";
 import { useContext } from "react";
 import GlobalContext from "./context/globalContext.jsx";
 
+import { FaBars } from "react-icons/fa";
+
 import "./App.css";
 import "./index.css";
 
 function App() {
 
   const [menu, setMenu] = useState("Home");
-
-  const homeRef = useRef(null);
-  const aboutRef = useRef(null);
-  const skillsRef = useRef(null);
-  const portfolioRef = useRef(null);
-  const contactRef = useRef(null);
+  const [hiden, setHiden] = useState("");
+  const [showMenu, setShowMenu] = useState(false);
+  
 
   const GlobalData = useContext(GlobalContext);
 
@@ -34,6 +33,16 @@ function App() {
   const scrollToSection = (elementRef, menuItem) => {
     setMenu(menuItem)
     elementRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
+
+  const menuMobile = () => {
+    setShowMenu(!showMenu)
+
+    if(showMenu) {
+      return setHiden("hiden")
+    } else {
+      setHiden("")
+    }
   }
 
   return (
@@ -60,7 +69,21 @@ function App() {
                 )
               })}
             </div>
+            <FaBars className="mobile" onClick={menuMobile}/>
           </div>
+          <ul className={`menu-container-mobile ${hiden === "hiden" ? hiden : ""}`}>
+            {optionsMenu.map((menuItem, index) => {
+              return (
+                <li 
+                  key={ index } 
+                  className={menuItem.nav === menu ? "active" : ""}  
+                  onClick={() => scrollToSection(menuItem.scroll, menuItem.nav)} 
+                >
+                  { menuItem.nav }
+                </li>
+              )
+            })}
+          </ul>
         </Header>
         <Main/>
         {GlobalData.showModel && <Models/> }

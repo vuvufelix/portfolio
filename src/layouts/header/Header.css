@@ -12,6 +12,7 @@ header {
     z-index: 2;
 
     display: block;
+    transition: .3s;
     
 
     div {
@@ -51,11 +52,71 @@ header {
                 font-style: italic;
             }
         }
+
+        .mobile {
+            display: none;
+        }
+    }
+
+    .menu-container-mobile {
+        display: none;
     }
 }
 
 @media screen and (max-width: 750px) {
     header {
         width: 87vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    header {
+
+        border-radius: 1rem;
+
+        div {
+
+            .title-container > h1 {
+                font-size: 1.1rem;
+            }
+
+            .menu-container {
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+                color: skyblue;
+                cursor: pointer;
+                transition: .3s;
+            }
+
+            .mobile:hover {
+                color: #75bcd8;
+            }
+        }
+
+        .menu-container-mobile.hiden {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            gap: 1rem;
+        }
+
+        .menu-container-mobile.hiden > li {
+            cursor: pointer;
+            position: relative;
+            margin-left: -2.5rem;
+            position: relative;
+        }
+
+        .menu-container-mobile.hiden > li::before {
+            position: absolute;
+            content: "";
+            width: 10%;
+            height: 0.1rem;
+            background-color: skyblue;
+            bottom: 0;
+        }
     }
 }
