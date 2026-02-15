@@ -46,22 +46,6 @@ const SpaceBackground = () => {
         speed: 0.3, // Movimento lento e suave
       },
     },
-    interactivity: {
-      events: {
-        onHover: {
-          enable: true,
-          mode: "grab", // Estrelas se conectam ao passar o mouse
-        },
-      },
-      modes: {
-        grab: {
-          distance: 140,
-          links: {
-            opacity: 0.2,
-          },
-        },
-      },
-    },
   };
 
   if (init) {
