@@ -1,7 +1,7 @@
 import "./Main.css";
 
 // Imagens
-import vuvu from "../../assets/vuvu2.png";
+import vuvu from "../../assets/vuvufelix.jpg";
 import build from "../../assets/build.webp";
 import imageProject1 from "../../assets/imagemProject.png";
 import neneth from "../../assets/nenet.png";
